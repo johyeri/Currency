@@ -1,4 +1,4 @@
-package com.wirebarley.correncyConverter;
+package com.wirebarley.currencyConverter;
 
 import java.text.DateFormat;
 import java.util.Date;
