@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>환율 계산</title>
+<script type="text/javascript">
+
+window.location = getContextPath() + "/main.do";
+
+function getContextPath(){
+	var offset=location.href.indexOf(location.host)+location.host.length;
+	var ctxPath=location.href.substring(offset,location.href.indexOf('/',offset+1));
+	return ctxPath;
+}
+</script>
+</head>
+<body>
+
+</body>
+</html>
