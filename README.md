@@ -3,10 +3,10 @@
 ## 개발환경
 Category | Detail
 ---- | ----
-Laguage & Library | Java 8, HTML5, JavaScript, jQuery, Ajax
+Java version | Java 8
 API | currencylayer (https://currencylayer.com/)
-IDE | Eclpise (2020-12)
-Server | Tomcat(v8.5)
+IDE | Eclipse (2020-12)
+Server | Apache-Tomcat v8.5
 CI | Github
 Framework | Spring Framework, Maven
 ------------
