@@ -25,7 +25,7 @@ public class CurrencyConverterController {
 	}
 	
 //환율조회
-	@RequestMapping(value="/currencyLive.do", method=RequestMethod.GET)
+	@RequestMapping(value="/loadCurrency.do", method=RequestMethod.GET)
 	public ModelAndView getCurrency(ModelAndView mv) {
 		mv = new ModelAndView("jsonView");
 		final String accessKey = "06382c005c29e97d25145ab7ad7982b2"; //홈페이지에서 얻은 키값
@@ -47,7 +47,6 @@ public class CurrencyConverterController {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		System.out.println("환율확인: " + mv.getModelMap());
 		return mv;
 	}
 
