@@ -8,7 +8,7 @@ API | currencylayer (https://currencylayer.com/)
 IDE | Eclpise (2020-12)
 Server | Tomcat(v8.5)
 CI | Github
-FramWork | Spring Framework, Maven
+Framework | Spring Framework, Maven
 ------------
 ## 주요 기능
 * 송금국가 미국(USD)으로 고정
