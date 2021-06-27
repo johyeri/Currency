@@ -56,7 +56,8 @@
 			//국가 변경 시 환율 변경되도록 하기
 			$("#selectCountry").change(function() {
 				currencyImport();
-				$("#calResult").empty(); //계산된 금액은 비울 것
+				$("#calResult").empty(); //계산된 금액 비우기
+				$("#remittanceAmount").val(""); //입력값비우기
 			});
 			
 			//송금액입력
@@ -98,19 +99,19 @@
 		}
 		
 		//계산값 나타내기
-		function calculate() {
-			var exchangeName = ($("#selectCountry option:selected").attr("title")).slice(3,6);
+		function exchangeRateCal() {
+			var currencyName = ($("#selectCountry option:selected").attr("title")).slice(3,6);
 			var total = (exchangeRate * $("#remittanceAmount").val()).toFixed(2);
 			total = insertComma(total);
 			$("#calResult").empty();
-			$("#calResult").append("수취금액은 " + total + " " + exchangeName + " 입니다.");
+			$("#calResult").append("수취금액은 " + total + " " + currencyName + " 입니다.");
 		}
 
 		//금액에 대한 유효성검사
 		function chkRemittance() {
 			var remittanceAmount = $("#remittanceAmount").val();
 			if (remittanceAmount > 0 && remittanceAmount <= 10000 && !isNaN(remittanceAmount)) {
-				calculate();
+				exchangeRateCal();
 			} else {
 				alert("송금액이 바르지 않습니다.");
 				$("#remittanceAmount").val(""); //값 초기화
